@@ -5,7 +5,7 @@ body {background-color: lightgrey;}
 <form action="#" id="demo">
   <fieldset>
     <h1><legend>FORM</legend></h1>
-	<p>First name:<input type="text" name="firstname" value=""></p>
+	<p>First name:<input type="text" name="firstname" value="" id="namefirst"></p>
     <p>Last name: <input type="text" name="lastname" value=""></p>
     <p>Gender<input type="radio" name="sex" value="male" checked>Male<input type="radio" name="sex" value="female">Female</p>
 <p>Country	<select name="Country">
@@ -46,10 +46,12 @@ function drop(ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 
-function Submitfunction() {
+function Submitfunction(form) {
+var name = form.firstname.value+" "+form.lastname.value;
 
-document.getElementById("demo").innerHTML = "<h3>Thanku For Your Submission</h3>";
-    
+document.getElementById("demo").innerHTML = name+" Thanku for Your Submission";
+
+
 }
 </script>
 </head>
@@ -60,7 +62,7 @@ Drag and Drop:<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
 </p>
 </body>
 <br>
-<input type="submit" value="Submit" onclick="Submitfunction()">
+<input type="submit" value="Submit" onclick="Submitfunction(this.form)">
   </fieldset>
 </form>
 </html>
