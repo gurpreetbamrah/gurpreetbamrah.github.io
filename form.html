@@ -2,7 +2,7 @@
 <style>
 body {background-color: lightgrey;}
 </style>
-<form action="index3.html">
+<form action="#" id="demo">
   <fieldset>
     <h1><legend>FORM</legend></h1>
 	<p>First name:<input type="text" name="firstname" value=""></p>
@@ -45,6 +45,12 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
+
+function myfunction() {
+
+document.getElementById("demo").innerHTML = "Thanku For Your Submission";
+    
+}
 </script>
 </head>
 <body>
@@ -54,7 +60,7 @@ Drag and Drop:<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
 </p>
 </body>
 <br>
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" onclick="myfunction()">
   </fieldset>
 </form>
 </html>
