@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Appium</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+   <center> <b><h1>Appium</h1></b>
+   </div>
+<p><b>What is Appium?</p></b>
+<ul>
+<li>Appium  is a open-source tool used for automating mobile apps ,mobile web application, mobile hybrid applications.
+<li>Its supports all three types of platform :android,ios and hybrid.
+<li>Appium is "cross-platform": you can use same api to test against different platforms.
+<li>Appium is a language independant : you can use any language to automate test suite (Java,Python,Javascript,Jquery).
+</ul>
+<br>
+<p><b>Appium Architecture</p></b>
+<ul>
+<p>Let us recall the architecture selenium webdriver first</p>
+<li>selenium webdriver basically uses the binding language(Java/Jquery/Javascript/Python) to interact with the browser.</li>
+<li>so the components are binding language + selenium webdriver + browser</li>   
+</ul>
+<br>
+<p><b>Now think of the components of automate mobile app:</p></b>
+<ul>
+<li>mobile app(.apk) + selenium webdriver + appium + emulator/simulator/avd/real device (to launch mobile app)</li>
+<li>Appium is basically a server ,written in node.js ,which implements selenium webdriver</li>
+<li>Basically Appium recieves the request from the client script,handle them as http request and gives approapiate response on the server logs.</li>
+</div>
+</body>
+</html>
