@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Appium</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="container">
-  <div class="jumbotron">
-   <center> <b><h1>Appium</h1></b>
-   </div>
-<p><b>What is Appium?</p></b>
-<ul>
-<li>Appium  is a open-source tool used for automating mobile apps ,mobile web application, mobile hybrid applications.
-<li>Its supports all three types of platform :android,ios and hybrid.
-<li>Appium is "cross-platform": you can use same api to test against different platforms.
-<li>Appium is a language independant : you can use any language to automate test suite (Java,Python,Javascript,Jquery).
-</ul>
-<br>
-<p><b>Appium Architecture</p></b>
-<ul>
-<p>Let us recall the architecture selenium webdriver first</p>
-<li>selenium webdriver basically uses the binding language(Java/Jquery/Javascript/Python) to interact with the browser.</li>
-<li>so the components are binding language + selenium webdriver + browser</li>   
-</ul>
-<br>
-<p><b>Now think of the components to automate mobile app:</p></b>
-<ul>
-<li>mobile app(.apk) + selenium webdriver + appium + emulator/simulator/avd/real device (to launch mobile app)</li>
-<li>Appium is basically a server ,written in node.js ,which implements selenium webdriver</li>
-<li>Basically Appium recieves the request from the client script,handle them as http request and gives approapiate response on the server logs.</li>
-</div>
-</body>
+  <head>
+    <title>Appium</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <center>
+        <b>
+          <h1>Appium</h1>
+        </b>
+      </div>
+      <p><b>What is Appium?</p>
+      </b>
+      <ul>
+        <li>Appium  is a open-source tool used for automating mobile apps ,mobile web application, mobile hybrid applications.
+        <li>Its supports all three types of platform :android,ios and hybrid.
+        <li>Appium is "cross-platform": you can use same api to test against different platforms.
+        <li>Appium is a language independant : you can use any language to automate test suite (Java,Python,Javascript,Jquery).
+      </ul>
+      <br>
+      <p><b>Appium Architecture</p>
+      </b>
+      <ul>
+        <p>Let us recall the architecture selenium webdriver first:</p>
+        <li>selenium webdriver basically uses the binding language(Java/Jquery/Javascript/Python) to interact with the browser.</li>
+        <li>so the components are binding language + selenium webdriver + browser</li>
+      </ul>
+      <br>
+      <p><b>Now think of the components to automate mobile app:</p>
+      </b>
+      <ul>
+        <li>mobile app(.apk) + selenium webdriver + appium + emulator/simulator/avd/real device (to launch mobile app)</li>
+        <li>Appium is basically a server ,written in node.js ,which implements selenium webdriver</li>
+        <li>Basically Appium recieves the request from the client script,handle them as http request and gives approapiate response on the server logs.</li>
+      </ul>
+      <br>
+      <p><b>Setting Up Appium On Window</p>
+      </b>
+      <ul>
+      <li>Now before setting all the components of Appium one question comes in our mind how do we find elements in a app</li>
+      <br>
+      1)<b>Appium Inspector :</b> appium have thier own inspector.<br>
+      2)<b>UI Automater     :</b>other option is UI Automater,you can download the UI automator to find the element in app.UI Automater is the preferred one.<br>
+      <br><b>Please Note :In an app we have only two options to locate the element id and class.You cannot find elements by other means xpath,linktext and all.</b>
+      <br>
+      <br>
+      <p><b><u>Automating Android App- Components Needed</u></p>
+      </b>
+     <b> 1.Download the Android SDK</b><a href="http://developer.android.com/sdk/index.html">  android sdk</a><br>
+      <br>
+      i)extract it and click on android studio bundle .exe file
+      <br>ii)setup up sdk path in Enviroment Variable.
+      ANDROID_HOME=C:\Users\gurpreetsingh\AppData\Local\Android\sdk\
+      <br>Also in path variable include : %ANDROID_HOME%\tools and %ANDROID_HOME%\platform-tools
+      <br>iii)Now open command prompt and type :<br>
+      <b>android sdk</b>
+      <br>it will open sdk manager install all the api above 4.2 and also the system image.
+      <br>
+      iv)<b>Setting up avd(android virtual device )</b>
+      <br>in the command prompt type : <b>android avd</b><br>
+      Note:this will allow you create virtual device to launch your app.<br>
+      <br>
+	  try starting the avd make sure it is successfully configured virtual device, now stop the server.
+	  <br><b>install apk in adb</b> copy app in platform-tools and type the command<br>
+	  <b>adb install appname.apk</b>
+	  Make sure it is succesfully installed,now start your avd server and launch your app ,now you can stop avd as it is successfully configured<br><br>
+     <b> 2.Download the Appium</b> <a href="http://appium.io/"> appium </a><br>
+	  <br> click on Android Setting 
+	  <br>choose the apk
+	 <br> Note :In the latest version of Appium package and Launch Activity are detected automatically by appium earlier we used to provide it.
+	 <br>click the no reset checkbox this ensures appium will not restart the your app.
+	 <br>Choose the  AVD from the  launch device ,we configured this avd in  earlier steps.
+	 <br> Choose the Platofrm name Android.
+	 <br>Automation name -Appium
+	 <br>Platform name 5.1 lollipop or any other
+	 <br>Device name as Emulator
+	 <br>On Click on Starting the Appium Server.It should start the avd and launch your App.
+	 <br><b>Note :If it does not launch you avd,click on Appium Inspector and Click on Refresh Button and Monitor Appium Server Logs.</b>
+	  
+    </div>
+  </body>
 </html>
