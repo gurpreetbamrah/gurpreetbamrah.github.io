@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="allimages.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </head>
@@ -33,10 +34,10 @@
         <li>so the components are binding language + selenium webdriver + browser</li>
       </ul>
       <br>
-      <p><b>Now think of the components to automate mobile app:</p>
-      </b>
+      <p><b>Now think of the components to automate mobile app:</p></b>
+	  <p> <img src="images/appiumarchitecture.jpg"  class="setup"> </p>
       <ul>
-        <li>mobile app(.apk) + selenium webdriver + appium + emulator/simulator/avd/real device (to launch mobile app)</li>
+	   <li>mobile app(.apk) + selenium webdriver + appium + emulator/simulator/avd/real device (to launch mobile app)</li>
         <li>Appium is basically a server ,written in node.js ,which implements selenium webdriver</li>
         <li>Basically Appium recieves the request from the client script,handle them as http request and gives approapiate response on the server logs.</li>
       </ul>
@@ -56,15 +57,20 @@
      <b> 1.Download the Android SDK</b><a href="http://developer.android.com/sdk/index.html">  android sdk</a><br>
       <br>
       i)extract it and click on android studio bundle .exe file
+	 <p> <img src="images/androidsetup1.jpg"  class="setup1"> </p><br>
+	 <p><img src="images/androidsetup2.jpg"  class="setup2"> </p>
       <br>ii)setup up sdk path in Enviroment Variable.
       ANDROID_HOME=C:\Users\gurpreetsingh\AppData\Local\Android\sdk\
       <br>Also in path variable include : %ANDROID_HOME%\tools and %ANDROID_HOME%\platform-tools
       <br>iii)Now open command prompt and type :<br>
       <b>android sdk</b>
       <br>it will open sdk manager install all the api above 4.2 and also the system image.
+	  <p><img src="images/sdkmanager1.jpg"  class="setup3"> </p>
+	  <p><img src="images/sdkmanager2.jpg"  class="setup4"> </p>
       <br>
       iv)<b>Setting up avd(android virtual device )</b>
       <br>in the command prompt type : <b>android avd</b><br>
+	  <p><img src="images/avd1.jpg"  class="setup5"> </p>
       Note:this will allow you create virtual device to launch your app.<br>
       <br>
 	  try starting the avd make sure it is successfully configured virtual device, now stop the server.
