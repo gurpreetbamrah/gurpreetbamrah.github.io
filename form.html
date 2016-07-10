@@ -1,33 +1,34 @@
 <html>
+<head>
 <style>
 body {background-color: lightgrey;}
 </style>
+<body>
 <form action="#" id="demo">
   <fieldset>
-    <h1><legend>FORM</legend></h1>
+    <h1><legend>TEST FORM</legend></h1>
 	<p>First name:<input type="text" name="firstname" value="" id="namefirst"></p>
     <p>Last name: <input type="text" name="lastname" value=""></p>
-    <p>Gender<input type="radio" name="sex" value="male" checked>Male<input type="radio" name="sex" value="female">Female</p>
+    <p>Gender<input type="radio" name="sex" value="male">Male<input type="radio" name="sex" value="female">Female</p>
 <p>Country	<select name="Country">
   <option value="India">India</option>
   <option value="USA">USA</option>
-  <option value="Australlia">Australlia</option>
-  <option value="Russsia">Russsia</option></select></p>
+  <option value="Australlia">Australia</option>
+  <option value="Russsia">Russia</option></select></p>
   <p>Checkbox
    <input type="checkbox" name="vehicle1" value="Bike">Checkbox1
   <input type="checkbox" name="vehicle2" value="Car">Checkbox2
   <input type="checkbox" name="vehicle3" value="Truck">Checkbox3</p>
   <p>DOB<input type="date" name="bday"></p> 
   <p>Upload Image: <input type="file" name="pic" id="pic"><br>
-<p>Alert  
-  <button onclick="myFunction()">I am Alert</button>
- <script>
+<p>Alert<button onclick="myFunction()">I am Alert</button></p>
+<script>
 function myFunction() {
     alert("I am an alert box!");
 }
 </script>
-</p>
-<body>
+</body>
+
 <style>
 #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
 </style>
@@ -49,17 +50,16 @@ function drop(ev) {
 function Submitfunction(form) {
 var name = form.firstname.value+" "+form.lastname.value;
 
-document.getElementById("demo").innerHTML = name+" Thanku for Your Submission";
+document.getElementById("demo").innerHTML = name+" Thank You for Your Submission";
 
 
 }
 </script>
 </head>
-<body>
 
-Drag and Drop:<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
-<img id="drag1" src="img.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
-</p>
+
+<!--  Drag and Drop:<div id="targetfield" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>  
+<img id="draggable" src="images/drag.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">   -->
 </body>
 <br>
 <input type="submit" value="Submit" onclick="Submitfunction(this.form)">
