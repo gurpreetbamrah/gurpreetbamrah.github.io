@@ -2,7 +2,10 @@
 <head>
 <style>
 body {background-color: lightgrey;}
+#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
 </style>
+
+</head>
 <body>
 <form action="#" id="demo">
   <fieldset>
@@ -21,18 +24,24 @@ body {background-color: lightgrey;}
   <input type="checkbox" name="vehicle3" value="Truck">Checkbox3</p>
   <p>DOB<input type="date" name="bday"></p> 
   <p>Upload Image: <input type="file" name="pic" id="pic"><br>
-<p>Alert<button onclick="myFunction()">I am Alert</button></p>
+<p>Alert<input type="button" onclick="myFunction()" value="I am Alert"/></p>
+
+
+
+
+
+<!--  Drag and Drop:<div id="targetfield" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>  
+<img id="draggable" src="images/drag.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">   -->
+
+<br>
+<input type="submit" value="Submit" onclick="Submitfunction(this.form)">
+  </fieldset>
+</form>
+</body>
 <script>
 function myFunction() {
     alert("I am an alert box!");
 }
-</script>
-</body>
-
-<style>
-#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
-</style>
-<script>
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -55,14 +64,4 @@ document.getElementById("demo").innerHTML = name+" Thank You for Your Submission
 
 }
 </script>
-</head>
-
-
-<!--  Drag and Drop:<div id="targetfield" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>  
-<img id="draggable" src="images/drag.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">   -->
-</body>
-<br>
-<input type="submit" value="Submit" onclick="Submitfunction(this.form)">
-  </fieldset>
-</form>
 </html>
