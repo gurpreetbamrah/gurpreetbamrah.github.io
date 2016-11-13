@@ -10,9 +10,9 @@ body {background-color: lightgrey;}
 <form action="#" id="demo">
   <fieldset>
     <h1><legend>TEST FORM</legend></h1>
-	<p>First name:<input type="text" name="firstname" value="" id="namefirst"></p>
-    <p>Last name: <input type="text" name="lastname" value=""></p>
-    <p>Gender<input type="radio" name="sex" value="male">Male<input type="radio" name="sex" value="female">Female</p>
+	<p>First name:<input type="text" name="firstname" value="" id="namefirst">
+    <p>Last name:<input type="text" name="lastname" value=""></p>
+    <p>Gender:  <input type="radio" name="sex" value="male">Male<input type="radio" name="sex" value="female">Female</p>
 <p>Country	<select name="Country">
   <option value="India">India</option>
   <option value="USA">USA</option>
@@ -22,18 +22,14 @@ body {background-color: lightgrey;}
    <input type="checkbox" name="vehicle1" value="Bike">Checkbox1
   <input type="checkbox" name="vehicle2" value="Car">Checkbox2
   <input type="checkbox" name="vehicle3" value="Truck">Checkbox3</p>
-<!--  <p>DOB<input type="date" name="bday"></p>    -->
+ <!-- <p>DOB<input type="date" name="bday"></p> -->
   <p>Upload Image: <input type="file" name="pic" id="pic"><br>
 <p>Alert<input type="button" onclick="myFunction()" value="I am Alert"/></p>
-
-
-
-
-
-<!--  Drag and Drop:<div id="targetfield" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>  
-<img id="draggable" src="images/drag.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">   -->
-
+<p>Drag and Drop:
+<br><div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div></p>
 <br>
+<img id="drag1" src="images/drag.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<br><br>
 <input type="submit" value="Submit" onclick="Submitfunction(this.form)">
   </fieldset>
 </form>
