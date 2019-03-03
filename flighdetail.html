@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+body {background-color: lightgrey;}
+#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+
+</head>
+<body>
+<form action="#" id="demo">
+  <fieldset>
+    <h1><legend>FLIGHT DETAIL</legend></h1>
+<p>Country	<select name="Country">
+  <option value="Delhi">Delhi</option>
+  <option value="Bangalore">Bangalore</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Nagpur">Nagpur</option></select>
+
+</p>
+<input type="submit" value="Submit" onclick="Submitfunction(this.form)">
+  </fieldset>
+</form>
+</body>
+<script>
+
+function Submitfunction(form) {
+document.getElementById("demo").innerHTML = "Data Saved Sucessfully";
+
+
+}
+</script>
+</html>
